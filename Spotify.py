@@ -44,7 +44,7 @@ playlist_data={
 }
 play_data=requests.post(PLAYLIST_URL,json=playlist_data,headers=play_list_header)
 PLAY_ID=play_data.json()['id']
-#//////////////////////////////////////////LOOPING THRIUGH EACH SONG AND ADDING THEM INTO PLAYLIST CREATED ABOVE/////////////////////////////////////////////////////////
+#//////////////////////////////////////////LOOPING THRoUGH EACH SONG AND ADDING THEM INTO PLAYLIST CREATED ABOVE/////////////////////////////////////////////////////////
 for x,y in enumerate(result):
     nxt=y.find('h3',{'id':'title-of-a-story'}).getText().strip()
     SONGS.append(nxt)
